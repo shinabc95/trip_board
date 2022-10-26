@@ -1,4 +1,4 @@
-package com.board.trip.web;
+package com.board.trip.controller;
 
 
 import org.springframework.stereotype.Controller;
@@ -10,5 +10,10 @@ public class indexController {
     @GetMapping("/")
     public String index(){
         return "index";
+    }
+
+    @GetMapping("/tripInfoBoard")
+    public String tripInfoBoard_move(){
+        return "tripInfoBoard";
     }
 }
