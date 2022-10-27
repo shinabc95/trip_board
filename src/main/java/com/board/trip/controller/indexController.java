@@ -16,4 +16,9 @@ public class indexController {
     public String tripInfoBoard_move(){
         return "tripInfoBoard";
     }
+
+    @GetMapping("/tripReview")
+    public String tripReview_Move(){
+        return "review";
+    }
 }
