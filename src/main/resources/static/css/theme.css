@@ -66,6 +66,18 @@ body {
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
+table, td, th {
+  border : 1px solid black;
+  border-collapse : collapse;
+}
+table {
+  width : 300px;
+  height : 200px;
+}
+th, td {
+  text-align: center;
+}
+
 hr {
   margin: 1rem 0;
   color: #C5E0FA;
@@ -18570,6 +18582,34 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 .voyage-tabs .nav-item.show .nav-link {
   border-bottom-color: #FE7A15;
 }
+
+/*여행지 정보 게시글 입력 구간*/
+/*지역 선택 버튼 css*/
+.cl_bo fl_left{
+      float: left;
+      width: 100px;
+      height: 100px;
+      text-align: center;
+      line-height: 100px;
+      font-weight: bold;
+  }
+    .fl_left{
+      float: left;
+      width: 100px;
+      height: 100px;
+      text-align: center;
+      line-height: 100px;
+      font-weight: bold;
+  }
+  .form-group{
+      color: #39434D;
+      background-color: #FFFEFE;
+      border: 0 solid #ACCAE5;
+      border-bottom: 1px solid #99B4CC;
+      border-radius: 0;
+  }
+/*!지역 선택 버튼 css*/
+/*!여행지 정보 게시글 입력 구간*/
 
 /*-----------------------------------------------
 |   User Styles
