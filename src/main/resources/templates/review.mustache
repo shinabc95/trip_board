@@ -1,20 +1,21 @@
 {{>layout/header}}
-
+<!--insert into review_posts (author, content, title) values ('author', 'content', 'title');-->
 <!-- ===============================================-->
 <!--    Main Content-->
 <!-- ===============================================-->
 <main>
     <section class="mt-7 py-0">
     <div class="container marketing">
+        {{#posts}}
 
         <!-- Three columns of text below the carousel -->
         <div class="row">
             <div class="col-lg-4">
                 <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false"><image href="/img/gallery/author-1.png" width="140" height="140"></image></svg>
 
-                <h2 class="fw-normal">제목</h2>
+                <h2 class="fw-normal">{{author}}</h2>
                 <p>############내용 요약###############</p>
-                <p><a class="btn btn-secondary" href="#">보러 가기</a></p>
+                <p><a class="btn btn-secondary" href="/reviewposts">보러 가기</a></p>
             </div><!-- /.col-lg-4 -->
             <div class="col-lg-4">
                 <svg class="bd-placeholder-img rounded-circle" src="/img/gallery/author-2.png" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false"><image href="/img/gallery/author-2.png" width="140" height="140"></image></svg>
@@ -79,6 +80,7 @@
         <!-- /END THE FEATURETTES -->
 
     </div>
+        {{/posts}}
     </section>
 
 </main>

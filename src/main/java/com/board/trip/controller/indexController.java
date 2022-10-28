@@ -1,11 +1,19 @@
 package com.board.trip.controller;
 
 
+import com.board.trip.service.reviewposts.ReviewPostsService;
+import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
 
 @Controller
+@RequiredArgsConstructor
 public class indexController {
+
+    private final ReviewPostsService reviewPostsService;
 
     @GetMapping("/")
     public String index(){
@@ -18,7 +26,14 @@ public class indexController {
     }
 
     @GetMapping("/tripReview")
-    public String tripReview_Move(){
+    public String tripReview_Move(Model model){
+        model.addAttribute("posts", reviewPostsService.findAllDesc());
         return "review";
     }
+
+    @GetMapping("/login")
+    public String loginPageMove() { return "login";}
+
+    @GetMapping("/reviewposts")
+    public String reviewPageMove() { return "reviewBoard"; }
 }
