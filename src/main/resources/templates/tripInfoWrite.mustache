@@ -1,5 +1,9 @@
 {{>layout/header}}
 
+<!--네이버 스마트 에디터-->
+<script type="text/javascript" src="/smarteditor/js/HuskyEZCreator.js" charset="utf-8"></script>
+<!--네이버 스마트 에디터-->
+
 <script type="text/javascript" src="/smarteditor/js/HuskyEZCreator.js" charset="utf-8"></script>
 <!-- ===============================================-->
 <!--    Main Content-->
@@ -89,7 +93,7 @@
                                   style="margin:20px 0px 10px 0px; width:100%;"></textarea>
                     </div>
                     <!--게시글 저장 버튼 영역-->
-                    <button onclick="submitPost()" class="btn btn-voyage-outline order-0" type="button" style="margin:20px 0px 10px 0px;">
+                    <button onclick="savePost()" class="btn btn-voyage-outline order-0" type="button" style="margin:20px 0px 10px 0px;">
                         <span class="text-primary">게시글 올리기</span>
                     </button>
                 </form>
@@ -102,8 +106,11 @@
 <!--    End of Main Content-->
 <!-- ===============================================-->
 
+
+<!--네이버 스마트 에디터-->
+<script src="/smarteditor/js/smartEditor2_tripInfoWrite.js"></script>
 <script type="text/javascript">
-        submitPost = function() {
+        savePost = function() {
       oEditors.getById["editorTxt"].exec("UPDATE_CONTENTS_FIELD", [])
       let content = document.getElementById("editorTxt").value
 
@@ -116,5 +123,6 @@
       }
     }
 </script>
+<!--네이버 스마트 에디터-->
 
 {{>layout/footer}}
