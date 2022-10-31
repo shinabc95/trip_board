@@ -9,14 +9,22 @@ import javax.persistence.*;
 @NoArgsConstructor
 @AllArgsConstructor
 @ToString
-@Entity(name="post")
-public class Post extends BaseTime{
+@Entity(name = "post")
+public class Post extends BaseTime {
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private long postNo;
+    private long _id;
 
-    @Column
+    @Column(columnDefinition = "TEXT")
     private String title;
     @Column(columnDefinition = "TEXT")
     private String content;
+    @Column(columnDefinition = "TEXT")
+    private String city;
+    @Column(columnDefinition = "TEXT")
+    private String district;
+    @Column(columnDefinition = "TEXT")
+    private String detailedAddress;
+
 }

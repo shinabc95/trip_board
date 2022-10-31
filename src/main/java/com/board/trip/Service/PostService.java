@@ -5,5 +5,7 @@ import com.board.trip.model.Post;
 import java.sql.SQLException;
 
 public interface PostService {
-    void savePost (Post post) throws SQLException;
+
+    public void saveTripInfo(Post post) throws SQLException;
+
 }

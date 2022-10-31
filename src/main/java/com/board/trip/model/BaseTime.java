@@ -17,8 +17,9 @@ import java.time.LocalDateTime;
 public class BaseTime {
 
     @CreatedDate
-    private LocalDateTime createdAt;
+    private LocalDateTime tripInfoBoardRegTime;
 
     @LastModifiedDate
-    private LocalDateTime modifiedAt;
+    private LocalDateTime tripInfoBoardModifiedTime;
+
 }
