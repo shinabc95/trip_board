@@ -42,4 +42,7 @@ public class indexController {
         model.addAttribute("posts", dto);
 
         return "reviewBoard"; }
+
+    @GetMapping("/writereview")
+    public String writereview() { return "writereview"; }
 }

@@ -1,0 +1,115 @@
+{{>layout/header}}
+
+<!--네이버 스마트 에디터-->
+<script type="text/javascript" src="/smarteditor/js/HuskyEZCreator.js" charset="utf-8"></script>
+<!--네이버 스마트 에디터-->
+
+<script type="text/javascript" src="/smarteditor/js/HuskyEZCreator.js" charset="utf-8"></script>
+<!-- ===============================================-->
+<!--    Main Content-->
+<!-- ===============================================-->
+<main class="main" id="top">
+    <section class="mt-7 py-0">
+        <br>
+        <div class="container">
+            <div class="row">
+                <!--게시글 입력 구간 영역-->
+                <input class="form-control input-box form-voyage-control"
+                       id="title" type="text" style="margin:20px 0px 10px 0px;"
+                       placeholder="제목"/>
+
+                <div class="form-group" type="text" style="margin:20px 0px 10px 0px;">
+
+                    <label class="col-sm-2 control-label hidden-xs" for="ca_name">지역<strong
+                            class="sound_only">(필수)</strong></label>
+
+                    <div class="col-sm-3">
+                        <div id="association_out" style="width:; height:auto;">
+                            <div class="cl_bo fl_left" style="margin-right:20px;">
+                                <select name="region_1_n" id="region_1_n" required class="form-control input-sm">
+                                    <option value="">- 광역 지역 -</option>
+                                    <option value="100000000" selected>서울시</option>
+                                    <option value="200000000">부산시</option>
+                                    <option value="300000000">대구시</option>
+                                    <option value="400000000">인천시</option>
+                                    <option value="500000000">광주시</option>
+                                    <option value="600000000">대전시</option>
+                                    <option value="700000000">울산시</option>
+                                    <option value="800000000">세종시</option>
+                                    <option value="900000000">경기도</option>
+                                    <option value="1000000000">강원도</option>
+                                    <option value="1100000000">충청북도</option>
+                                    <option value="1200000000">충청남도</option>
+                                    <option value="1300000000">전라북도</option>
+                                    <option value="1400000000">전라남도</option>
+                                    <option value="1500000000">경상북도</option>
+                                    <option value="1600000000">경상남도</option>
+                                    <option value="1700000000">제주도</option>
+                                </select>
+                            </div>
+
+                            <div class="fl_left">
+                                <select name="region_2_n" id="region_2_n" class="form-control input-sm">
+                                    <option value="">- 기초 지역 -</option>
+                                    <option value="101000000">강남구</option>
+                                    <option value="102000000">강동구</option>
+                                    <option value="103000000">강북구</option>
+                                    <option value="104000000">강서구</option>
+                                    <option value="105000000">관악구</option>
+                                    <option value="106000000">광진구</option>
+                                    <option value="107000000">구로구</option>
+                                    <option value="108000000">금천구</option>
+                                    <option value="109000000">노원구</option>
+                                    <option value="110000000">도봉구</option>
+                                    <option value="111000000">동대문구</option>
+                                    <option value="112000000">동작구</option>
+                                    <option value="113000000">마포구</option>
+                                    <option value="114000000">서대문구</option>
+                                    <option value="115000000">서초구</option>
+                                    <option value="116000000">성동구</option>
+                                    <option value="117000000">성북구</option>
+                                    <option value="118000000">송파구</option>
+                                    <option value="119000000">양천구</option>
+                                    <option value="120000000">영등포구</option>
+                                    <option value="121000000">용산구</option>
+                                    <option value="122000000">은평구</option>
+                                    <option value="123000000" selected>종로구</option>
+                                    <option value="124000000">중구</option>
+                                    <option value="125000000">중랑구</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <input class="form-control input-box form-voyage-control"
+                       id="inputAddressThree" type="text" style="margin:20px 0px 10px 0px;"
+                       placeholder="세부 주소"/>
+
+                <form action="#" method="POST">
+                    <div id="smarteditor">
+                        <!--ir1-->
+                        <textarea name="editorTxt" id="content" rows="10" placeholder="내용을 입력해주세요"
+                                  style="margin:20px 0px 10px 0px; width:100%;"></textarea>
+                    </div>
+                    <!--게시글 저장 버튼 영역-->
+                    <button id="btn-review-save" class="btn btn-voyage-outline order-0" type="button" style="margin:20px 0px 10px 0px;">
+                        <span class="text-primary">게시글 올리기</span>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+</main>
+<!-- ===============================================-->
+<!--    End of Main Content-->
+<!-- ===============================================-->
+
+
+<!--네이버 스마트 에디터-->
+<script src="/smarteditor/js/smartEditor2_tripInfoWrite.js"></script>
+
+<!--네이버 스마트 에디터-->
+
+{{>layout/footer}}
