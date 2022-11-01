@@ -1,2 +1,16 @@
 1. index 템플릿은 어디서 받은것인지 출처를 잊어서 아직 찾는 중...
 2. review 페이지 https://getbootstrap.com/docs/5.2/examples/carousel-rtl/
+
+3. <DB>
+- DB: MYSQL
+- DB명: trip_board
+- 비밀번호: rlarlqja1234
+- 테이블명: post
+- 컬럼: _id = GenerationType.IDENTITY
+      title = TEXT
+      content = TEXT
+      city = TEXT
+      district = TEXT
+      detailedAddress = TEXT
+      tripInfoBoardRegTime = DATE
+      tripInfoBoardModifiedTime = DATE

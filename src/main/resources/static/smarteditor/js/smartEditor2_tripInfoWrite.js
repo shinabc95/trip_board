@@ -50,23 +50,15 @@ var oEditors = []
           url: "/tripInfoBoard/tripInfoWrite/saveTripInfo"
           , data: post
           , success: function(data) {
-            console.log('<success>')
-            console.log('post:' + post.title)
-            console.log('post:' + post.content)
-            console.log('post:' + post.city)
-            console.log('post:' + post.district)
-            console.log('post:' + post.detailedAddress)
             alert('저장하였습니다.')
+            let url = "/tripInfoBoard"
+            location.replace(url);
           }
           , error: function(jqXHR, textStatus, errorThrown) {
-            console.log('<error>')
-            console.log('post:' + post.title)
-            console.log('post:' + post.content)
-            console.log('post:' + post.city)
-            console.log('post:' + post.district)
-            console.log('post:' + post.detailedAddress)
             console.log(jqXHR)
             alert('오류가 발생하였습니다.')
+            let url = "/tripInfoBoard"
+            location.replace(url);
           }
         })
       }

@@ -17,17 +17,25 @@
                     <tr>
                         <th style="text-align:center" width="10%">게시글 번호</th>
                         <th style="text-align:center" width="40%">제목</th>
-                        <th style="text-align:center" width="10%">작성자</th>
+                        <th style="text-align:center" width="10%">내용</th>
                         <th style="text-align:center" width="10%">주소</th>
-                        <th style="text-align:center" width="10%">게시 날짜</th>
+                        <th style="text-align:center" width="10%">날짜</th>
                         <th style="text-align:center" width="10%">좋아요</th>
                         <th style="text-align:center" width="10%">조회수</th>
                     </tr>
                     </thead>
                     <tbody id="tbody">
+                    {{#post}}
                     <tr>
-                        <th style="text-align:center" colspan="7">게시글이 없습니다.</th>
+                        <td>{{_id}}</td>
+                        <td><a href="/">{{title}}</a></td> <!--상세 페이지 작성되면 해당 페이지로 넘길 예정-->
+                        <td>{{content}}</td>
+                        <td>{{city}} {{district}}</td>
+                        <td>{{tripInfoBoardModifiedTime}}</td>
+                        <td>0</td>
+                        <td>0</td>
                     </tr>
+                    {{/post}}
                     </tbody>
                 </table>
             </div>
