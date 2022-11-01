@@ -8,7 +8,7 @@ var oEditors = []
         fCreator: "createSEditor2"
       })
 
-    savePost = function() {
+    saveTripInfo = function() {
       oEditors.getById["tripInfoBoard_EditorTxt"].exec("UPDATE_CONTENTS_FIELD", [])
       let content = document.getElementById("tripInfoBoard_EditorTxt").value
 
@@ -22,7 +22,8 @@ var oEditors = []
     }
 // 네이버 스마트 에디터 적용 구간
 
- $("#savePost").click(function() {
+// tripInfoBoard 데이터 전송 구간 / saveTripInfo()
+ $("#saveTripInfo").click(function() {
       oEditors.getById["tripInfoBoard_EditorTxt"].exec("UPDATE_CONTENTS_FIELD", [])
       let title = document.getElementById("tripInfoBoard_Title").value
       let content = document.getElementById("tripInfoBoard_EditorTxt").value
@@ -46,7 +47,7 @@ var oEditors = []
 
         $.ajax({
           type : "POST",            // HTTP method type(GET, POST) 형식이다.
-          url: "/smarteditor/savePost"
+          url: "/tripInfoBoard/tripInfoWrite/saveTripInfo"
           , data: post
           , success: function(data) {
             console.log('<success>')
@@ -70,3 +71,4 @@ var oEditors = []
         })
       }
     });
+// tripInfoBoard 데이터 전송 구간 / saveTripInfo()
