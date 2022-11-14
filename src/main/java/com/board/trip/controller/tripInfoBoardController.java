@@ -23,4 +23,9 @@ public class tripInfoBoardController {
     public String tripInfoWrite_move(){
         return "tripInfoWrite";
     }
+
+    @GetMapping("/tripInfoBoard/tripInfoRead")
+    public String tripInfoRead_move(){
+        return "tripInfoRead";
+    }
 }

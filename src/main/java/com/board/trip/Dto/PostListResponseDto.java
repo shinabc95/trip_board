@@ -2,10 +2,12 @@ package com.board.trip.Dto;
 
 import com.board.trip.model.Post;
 import lombok.Getter;
+import lombok.Setter;
 
 import java.time.LocalDateTime;
 
 @Getter
+@Setter
 public class PostListResponseDto {
     private Long _id;
     private String title;

@@ -26,7 +26,18 @@ public class PostService {
 
     @Transactional(readOnly = true)
     public List<PostListResponseDto> findAllDesc(){
-        return postRepository.findAllDesc().stream().map(PostListResponseDto::new) // == .map(post -> new PostListResponseDto(post))
+        List<PostListResponseDto> postListResponseDtoList =  postRepository.findAllDesc().stream().map(PostListResponseDto::new) // == .map(post -> new PostListResponseDto(post))
                 .collect(Collectors.toList());
+        for (int i=0; i < postListResponseDtoList.size(); i++){
+            PostListResponseDto postListResponseDto = postListResponseDtoList.get(i);
+            System.out.println("qwrqwwqd: "+postListResponseDtoList.get(i).get_id()
+                    +"\n"+postListResponseDto.getTitle()
+                    +"\n"+postListResponseDto.getContent()
+                    +"\n"+postListResponseDto.getCity()
+                    +"\n"+postListResponseDto.getDetailedAddress()
+                    +"\n"+postListResponseDto.getTripInfoBoardRegTime()
+                    +"\n"+postListResponseDto.getTripInfoBoardModifiedTime());
+        }
+        return postListResponseDtoList;
     }
 }

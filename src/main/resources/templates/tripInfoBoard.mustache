@@ -1,5 +1,14 @@
 {{>layout/header}}
 
+<!-- Header-->
+<header class="bg-dark py-5">
+    <div class="bg-secondary-gradient h-100 d-flex align-items-center">
+        <div class="text-light p-4 p-sm-6 p-lg-0 px-xxl-6">
+            <p class="fs-1 px-4 mb-6">아워트립에 자신만 알고 있는 좋은 여행지 또는 꿀팁을 사람들에게 공유해보세요.</p>
+        </div>
+    </div>
+</header>
+
 <!-- ===============================================-->
 <!--    Main Content-->
 <!-- ===============================================-->
@@ -7,8 +16,6 @@
 
     <section class="mt-7 py-0">
         <!--/.bg-holder-->
-
-        <br>
         <div class="container">
             <div class="row">
                 <!--목록 출력 영역-->
@@ -27,11 +34,11 @@
                     <tbody id="tbody">
                     {{#post}}
                     <tr>
-                        <td>{{_id}}</td>
-                        <td><a href="/">{{title}}</a></td> <!--상세 페이지 작성되면 해당 페이지로 넘길 예정-->
-                        <td>{{content}}</td>
-                        <td>{{city}} {{district}}</td>
-                        <td>{{tripInfoBoardModifiedTime}}</td>
+                        <td>{{{_id}}}</td>
+                        <td><a href="/tripInfoBoard/tripInfoRead">{{title}}</a></td> <!--상세 페이지 작성되면 해당 페이지로 넘길 예정-->
+                        <td>{{{content}}}</td>
+                        <td>{{{city}}} {{district}}</td>
+                        <td>{{{tripInfoBoardModifiedTime}}}</td>
                         <td>0</td>
                         <td>0</td>
                     </tr>

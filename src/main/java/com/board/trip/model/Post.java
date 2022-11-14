@@ -35,5 +35,4 @@ public class Post extends BaseTime {
         this.district = getDistrict();
         this.detailedAddress = getDetailedAddress();
     }
-
 }

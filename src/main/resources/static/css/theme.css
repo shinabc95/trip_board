@@ -8486,7 +8486,7 @@ fieldset:disabled .btn {
 }
 
 .mt-7 {
-  margin-top: 5rem !important;
+  margin-top: 0rem !important;
 }
 
 .mt-8 {
@@ -8586,7 +8586,7 @@ fieldset:disabled .btn {
 }
 
 .mb-6 {
-  margin-bottom: 4rem !important;
+  margin-bottom: 6rem !important;
 }
 
 .mb-7 {
@@ -9679,7 +9679,9 @@ fieldset:disabled .btn {
 }
 
 .bg-dark {
-  background-color: #262D33 !important;
+  margin-top: 2rem !important;
+  --bs-bg-opacity: 1;
+  background-color: rgba(var(--bs-dark-rgb), var(--bs-bg-opacity)) !important;
 }
 
 .bg-body {
