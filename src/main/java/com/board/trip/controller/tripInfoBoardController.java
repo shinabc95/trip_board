@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @Controller
 public class tripInfoBoardController {
 
-    //private final PostService postService;
+    private final PostService postService;
 
     /*@GetMapping("/tripInfoBoard")
     public String main(Model model){
@@ -25,7 +25,8 @@ public class tripInfoBoardController {
     }
 
     @GetMapping("/tripInfoBoard/tripInfoRead")
-    public String tripInfoRead_move(){
+    public String tripInfoRead_move(Model model){
+        model.addAttribute("post", postService.findAllDesc()); 이거 아이디 값 참조해서 그 아이디 값에 맞는 데이터만 가져오게 해야함.
         return "tripInfoRead";
     }
 }

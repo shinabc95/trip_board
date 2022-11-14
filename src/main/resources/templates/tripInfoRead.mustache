@@ -18,12 +18,11 @@
             <div class="row">
                 <!--게시글 영역-->
                 <div class="pt-5 ps-sm-7">
-                    <h4 class="mb-2 text-1000">Share a trip</h4>
-                    <h2 class="mb-3 text-primary fs-3 fs-md-6">Dubai</h2>
-                    <p class="fw-normal mb-0">Dubai, a city with many faces, is one of the
-                        world's most popular tourist destinations. The Burj Khalifa, the world's
-                        highest tower, is located here. The futuristic beauty of new buildings
-                        is at the heart of Dubai tourism.</p>
+                    {{#post}}
+                    <h4 class="mb-2 text-1000">{{{title}}}</h4>
+                    <h2 class="mb-3 text-primary fs-3 fs-md-6">{{{city}}} {{{district}}}</h2>
+                    <p class="fw-normal mb-0">{{{content}}}</p>
+                        {{/post}}
                 </div>
             </div>
         </div>
